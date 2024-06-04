@@ -1,0 +1,103 @@
+path_lookup = {"QS1":{"round1":"./data/QS1-1-SPUR-S2024-conversations_collection.csv",
+                      "round2":"./data/QS1-2-SPUR-S2024-conversations_collection.csv",
+                      "round3":"./data/QS1-3-SPUR-S2024-conversations_collection.csv",
+                      "round4":"./data/QS1-4-SPUR-S2024-conversations_collection.csv"
+                      },
+               "QS2":{"round1":"./data/QS2-1-SPUR-S2024-conversations_collection.csv",
+                      "round2":"./data/QS2-2-SPUR-S2024-conversations_collection.csv",
+                      "round3":"./data/QS2-3-SPUR-S2024-conversations_collection.csv",
+                      "round4":"./data/QS2-4-SPUR-S2024-conversations_collection.csv"
+                      },
+               "QS3":{"round1":"./data/QS3-1-SPUR-S2024-conversations_collection.csv",
+                      "round2":"./data/QS3-2-SPUR-S2024-conversations_collection.csv",
+                      "round3":"./data/QS3-3-SPUR-S2024-conversations_collection.csv",
+                      "round4":"./data/QS3-4-SPUR-S2024-conversations_collection.csv"
+                      },
+               "QS4":{"round1":"./data/QS4-1-SPUR-S2024-conversations_collection.csv",
+                      "round2":"./data/QS4-2-SPUR-S2024-conversations_collection.csv",
+                      "round3":"./data/QS4-3-SPUR-S2024-conversations_collection.csv",
+                      "round4":"./data/QS4-4-SPUR-S2024-conversations_collection.csv"
+                      }   
+               }
+
+col_lookup = {"QS1":{"block1":[["dialog_questions_"+str(i+1) for i in range(8)], 
+                               ["CUQ_"+str(i+1) for i in range(16)]],
+                     "block2":[["CUQ_"+str(i+1)+".1" for i in range(16)], 
+                               ["empathy", "likable", "authentic"], ["partner_assessment_"+str(i+1) for i in range(8)]],
+                     "block3":[["empathy.1", "likable.1", "authentic.1"], ["partner_assessment_"+str(i+1)+".1" for i in range(8)], 
+                               ["system_design_"+str(i+1) for i in range(8)]],
+                     "block4":[["system_design_"+str(i+1)+".1" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1)+".1" for i in range(8)]],
+                     "block5":[["empathy.2", "likable.2", "authentic.2"], ["partner_assessment_"+str(i+1)+".2" for i in range(8)], 
+                               ["system_design_"+str(i+1)+".2" for i in range(8)]],
+                     "block6":[["system_design_"+str(i+1)+".3" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1)+".2" for i in range(8)]],
+                     "block7":[["dialog_questions_"+str(i+1)+".3" for i in range(8)], 
+                               ["CUQ_"+str(i+1)+".2" for i in range(16)]],
+                     "block8":[["CUQ_"+str(i+1)+".3" for i in range(16)], 
+                               ["empathy.3", "likable.3", "authentic.3"], ["partner_assessment_"+str(i+1)+".3" for i in range(8)]]
+                     },
+              "QS2":{"block1":[["CUQ_"+str(i+1) for i in range(16)], 
+                               ["empathy", "likable", "authentic"], ["partner_assessment_"+str(i+1) for i in range(8)]],
+                     "block2":[["empathy.1", "likable.1", "authentic.1"], ["partner_assessment_"+str(i+1)+".1" for i in range(8)], 
+                               ["system_design_"+str(i+1) for i in range(8)]],
+                     "block3":[["system_design_"+str(i+1)+".1" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1) for i in range(8)]],
+                     "block4":[["dialog_questions_"+str(i+1)+".1" for i in range(8)], 
+                               ["CUQ_"+str(i+1)+".1" for i in range(16)]],
+                     "block5":[["system_design_"+str(i+1)+".2" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1)+".2" for i in range(8)]],
+                     "block6":[["dialog_questions_"+str(i+1)+".3" for i in range(8)], 
+                               ["CUQ_"+str(i+1)+".2" for i in range(16)]],
+                     "block7":[["CUQ_"+str(i+1)+".3" for i in range(16)], 
+                               ["empathy.2", "likable.2", "authentic.2"], ["partner_assessment_"+str(i+1)+".2" for i in range(8)]],
+                     "block8":[["empathy.3", "likable.3", "authentic.3"], ["partner_assessment_"+str(i+1)+".3" for i in range(8)], 
+                               ["system_design_"+str(i+1)+".3" for i in range(8)]]
+                     },
+              "QS3":{"block1":[["empathy", "likable", "authentic"], ["partner_assessment_"+str(i+1) for i in range(8)], 
+                               ["system_design_"+str(i+1) for i in range(8)]],
+                     "block2":[["system_design_"+str(i+1)+".1" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1) for i in range(8)]],
+                     "block3":[["dialog_questions_"+str(i+1)+".1" for i in range(8)], 
+                               ["CUQ_"+str(i+1) for i in range(16)]],
+                     "block4":[["CUQ_"+str(i+1)+".1" for i in range(16)], 
+                               ["empathy.1", "likable.1", "authentic.1"], ["partner_assessment_"+str(i+1)+".1" for i in range(8)]],         
+                     "block5":[["dialog_questions_"+str(i+1)+".2" for i in range(8)], 
+                               ["CUQ_"+str(i+1)+".2" for i in range(16)]],
+                     "block6":[["CUQ_"+str(i+1)+".3" for i in range(16)], 
+                               ["empathy.2", "likable.2", "authentic.2"], ["partner_assessment_"+str(i+1)+".2" for i in range(8)]],
+                     "block7":[["empathy.3", "likable.3", "authentic.3"], ["partner_assessment_"+str(i+1)+".3" for i in range(8)], 
+                               ["system_design_"+str(i+1)+".2" for i in range(8)]],
+                     "block8":[["system_design_"+str(i+1)+".3" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1)+".3" for i in range(8)]]          
+                     },
+              "QS4":{"block1":[["system_design_"+str(i+1) for i in range(8)], 
+                               ["dialog_questions_"+str(i+1) for i in range(8)]],
+                     "block2":[["dialog_questions_"+str(i+1)+".1" for i in range(8)], 
+                               ["CUQ_"+str(i+1) for i in range(16)]],
+                     "block3":[["CUQ_"+str(i+1)+".1" for i in range(16)], 
+                               ["empathy", "likable", "authentic"], ["partner_assessment_"+str(i+1) for i in range(8)]],
+                     "block4":[["empathy.1", "likable.1", "authentic.1"], ["partner_assessment_"+str(i+1)+".1" for i in range(8)], 
+                               ["system_design_"+str(i+1)+".1" for i in range(8)]],         
+                     "block5":[["CUQ_"+str(i+1)+".2" for i in range(16)], 
+                               ["empathy.2", "likable.2", "authentic.2"], ["partner_assessment_"+str(i+1)+".2" for i in range(8)]],
+                     "block6":[["empathy.3", "likable.3", "authentic.3"], ["partner_assessment_"+str(i+1)+".3" for i in range(8)], 
+                               ["system_design_"+str(i+1)+".2" for i in range(8)]],
+                     "block7":[["system_design_"+str(i+1)+".3" for i in range(8)], 
+                               ["dialog_questions_"+str(i+1)+".2" for i in range(8)]],
+                     "block8":[["dialog_questions_"+str(i+1)+".3" for i in range(8)], 
+                               ["CUQ_"+str(i+1)+".3" for i in range(16)]]
+                     }              
+               }
+
+comb_lookup = {"round1":["c1-t1", "c2-t2", "c3-t3", "c4-t4", "c1-t2", "c2-t3", "c3-t4", "c4-t1"],
+               "round2":["c1-t2", "c2-t3", "c3-t4", "c4-t1", "c1-t3", "c2-t4", "c3-t1", "c4-t2"],
+               "round3":["c1-t3", "c2-t4", "c3-t1", "c4-t2", "c1-t4", "c2-t1", "c3-t2", "c4-t3"],
+               "round4":["c1-t4", "c2-t1", "c3-t2", "c4-t3", "c1-t1", "c2-t2", "c3-t3", "c4-t4"]
+               }
+
+group_lookup = {"QS1":["kyw2424"],
+                "QS2":["tw2441"],
+                "QS3":["egw7501"],
+                "QS4":["cjc8804"]
+                }
